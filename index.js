@@ -16,6 +16,11 @@ client.on('messageCreate', (message) => {
 		let fixedTwitterLink = twitterLink.replace(/twitter/, "vxtwitter")
 		message.reply(fixedTwitterLink)
 	}
+	if (message.content.match(/http(?:s)?:\/\/(?:www\.)?x\.com\/([a-zA-Z0-9_]+)/)){
+		let twitterLink = message.content
+		let fixedTwitterLink = twitterLink.replace(/x.com/, "fixupx.com")
+		message.reply(fixedTwitterLink)
+	}
 });
 
 
